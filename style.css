@@ -1,0 +1,161 @@
+:root {
+    --color-primary: #8c6ebd;
+    --color-secondary: #322866;
+    --color-tertiary: #9d0fa1;
+    --color-button: #392bfe;
+    --color-button-hover: #5520e5;
+    --color-text: #8387c2;
+    --color-white: #0f199c;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px; /* Limitar el ancho máximo */
+}
+
+/* Banner */
+.header-banner {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Sección de entrada */
+.input-section {
+    flex: 1.5; /* Usar un factor de flex que cambia según el diseño */
+    background-color: var(--color-secondary);
+    border-radius: 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Sombra para el contenedor */
+}
+
+/* Títulos */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-name {
+    flex-grow: 1; /* Crecer para ocupar el espacio disponible */
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 25px 0 0 25px;
+    font-size: 1rem;
+}
+
+/* Estilos de entrada de texto */
+.input-title {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #333;
+    border-radius: 25px 0 0 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de botón */
+button {
+    padding: 18px 40px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave en el hover */
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 0 27px 27px 0;
+}
+
+.button-add:hover {
+    background-color: #12bee9;
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-size: 1.125rem;
+    margin: 20px 5;
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #fc1d1d;
+    font-size: 1.375rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botón de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px 40px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 1rem;
+    border-radius: 35px;
+}
+
+.button-draw img {
+    margin-right: 20px; /* Modificado para un espacio más sutil */
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+@media (max-width: 700px) {
+    .main-title {
+        font-size: 2rem; /* Ajustar tamaños en móvil */
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+}
